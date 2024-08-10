@@ -1,1 +1,1 @@
-#Learning OpenCV on python3 
+*Learning OpenCV on python3 
