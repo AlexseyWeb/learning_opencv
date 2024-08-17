@@ -1,6 +1,6 @@
 import cv2 as cv 
 
-img = cv.imread("../Photos/white_dog.jpeg")
+img = cv.imread("../Photos/man.jpg")
 cv.imshow("Original", img)
 
 #GRAY IMAGE
@@ -12,11 +12,12 @@ blur = cv.GaussianBlur(img, (7,7), cv.BORDER_DEFAULT)
 cv.imshow("Blur", blur)
 
 #Edge Cascade
-canny = cv.Canny(img, 125, 170)
+canny = cv.Canny(img, 100, 100)
 cv.imshow("Edge Cascade", canny)
+cv.imwrite("man.jpg", canny)
 
 #Dilating the image
-dilated = cv.dilate(img, (3, 3), iterations=1)
+dilated = cv.dilate(img, (3, 3), iterations=3)
 cv.imshow("Dilated", dilated)
 
 #Eroding
