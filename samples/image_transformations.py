@@ -31,7 +31,17 @@ def rotation(img, angle, rPoint=None):
     return cv.warpAffine(img, rotMath, dimension)
 
 rotated = rotation(img, 90)
-    
 
-cv.imshow("Dog", rotated)
+#Flip
+fliped = cv.flip(img, 1)
+
+#Cropping
+cropped = img[100:img.shape[1]//2, 20:img.shape[0]//2 + 220]
+cv.imshow("Cropped", cropped)
+
+    
+#Connecting two images for beautiful result
+cv.imshow("Fliped", fliped)
+cv.imshow("original", img)
+
 cv.waitKey(0)
