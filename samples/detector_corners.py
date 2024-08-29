@@ -9,7 +9,7 @@ corners = np.float32(corners)
 
 for item in corners:
     x, y = item[0]
-    cv.circle(img,  (x, y), 5, (0, 0, 255), -1)
+    cv.circle(img,  (int(x), int(y)), 10, (0, 0, 255), -1)
 
 cv.imshow("Top", img)
 cv.waitKey(0)
